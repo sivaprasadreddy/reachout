@@ -1,0 +1,18 @@
+example: true
+name: "Amara Okafor"
+role: "Writer & creative thinker"
+bio: "Stories that make you pause, think, and feel a little more connected to the world."
+category: "Writing"
+location: "Lagos, Nigeria"
+tags: ["Storytelling", "Culture", "Essays"]
+avatar: "images/amara-okafor.svg"
+links:
+  - label: "Medium"
+    url: "https://medium.com"
+    icon: "medium"
+  - label: "Instagram"
+    url: "https://www.instagram.com"
+    icon: "instagram"
+  - label: "Personal website"
+    url: "https://example.com"
+    icon: "website"
