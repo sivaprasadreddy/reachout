@@ -4,13 +4,23 @@ A mobile-friendly, accessible community profile directory built with **Hugo**. P
 
 ## Run locally
 
-Install Hugo **0.169.0** (standard or extended), then run:
+With [mise](https://mise.jdx.dev/) installed, set up the pinned Node.js, Hugo, and Python versions:
 
 ```sh
-hugo server --cacheDir /tmp/reachout-hugo-cache
+mise trust
+mise install
+mise run dev
 ```
 
-Open <http://localhost:1313>. To build and verify deployment under a repository subpath:
+Open <http://localhost:1313>.
+
+- `mise run dev`: start the local server with live reload.
+- `mise run build`: create the production site in `public/`, failing on Hugo warnings or invalid profiles.
+- `mise run check`: build first, then check JavaScript syntax and generated pages, assets, and profile routes under `/reachout/`.
+
+Hugo’s cache stays in the ignored `.cache/hugo/` directory. No npm dependencies are required.
+
+Without mise, install Hugo **0.169.0**, Node.js **24.22.0**, and Python **3.14.10**, then run `hugo server --cacheDir /tmp/reachout-hugo-cache --baseURL http://localhost:1313/`. To build and verify deployment under a repository subpath:
 
 ```sh
 hugo --gc --minify --panicOnWarning --cacheDir /tmp/reachout-hugo-cache --baseURL https://example.org/reachout/

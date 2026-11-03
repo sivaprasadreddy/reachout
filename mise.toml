@@ -1,0 +1,23 @@
+[tools]
+node = "24.22.0"
+hugo = "0.169.0"
+python = "3.14.10"
+
+[env]
+HUGO_CACHEDIR = "{{ config_root }}/.cache/hugo"
+
+[tasks.dev]
+description = "Start the local Hugo development server"
+run = "hugo server --baseURL http://localhost:1313/ --disableFastRender"
+
+[tasks.build]
+description = "Build the production site and validate profile data"
+run = "hugo --gc --minify --panicOnWarning --cleanDestinationDir"
+
+[tasks.check]
+description = "Build, check JavaScript syntax, and validate generated pages and links"
+depends = ["build"]
+run = [
+  "node --check assets/js/main.js",
+  "python3 scripts/check_site.py --base-path /reachout/",
+]
