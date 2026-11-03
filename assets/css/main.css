@@ -1677,3 +1677,19 @@ legend {
   background: var(--paper);
   font-size: 14px;
 }
+
+.profile-twitter-share {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+  margin: 0;
+}
+.profile-twitter-share span:last-child {
+  margin-left: auto;
+}
+
+.profile-share-footer {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
