@@ -16,7 +16,7 @@ Open <http://localhost:1313>.
 
 - `mise run dev`: start the local server with live reload.
 - `mise run build`: create the production site in `public/`, failing on Hugo warnings or invalid profiles.
-- `mise run check`: build first, then check JavaScript syntax and generated pages, assets, and profile routes under `/reachout/`.
+- `mise run check`: build first, then check JavaScript syntax and generated pages, assets, and profile routes at the custom domain root (`/`).
 
 Hugo’s cache stays in the ignored `.cache/hugo/` directory. No npm dependencies are required.
 
@@ -62,7 +62,7 @@ To **require** PRs, configure a GitHub branch ruleset for `main`: require a pull
 
 ## GitHub Pages deployment
 
-Repository: [sivaprasadreddy/reachout](https://github.com/sivaprasadreddy/reachout). The workflow publishes to [ReachOut on GitHub Pages](https://sivaprasadreddy.github.io/reachout/) after a successful merge to `main`. For a new fork:
+Repository: [sivaprasadreddy/reachout](https://github.com/sivaprasadreddy/reachout). The intended public address is [reachout2me.online](https://reachout2me.online/). The existing [GitHub Pages address](https://sivaprasadreddy.github.io/reachout/) remains active until the custom-domain cutover is completed. For a new fork:
 
 1. In **Settings → Pages → Build and deployment**, choose **GitHub Actions** as the source.
 2. Enable a branch ruleset as described above.
@@ -71,6 +71,40 @@ Repository: [sivaprasadreddy/reachout](https://github.com/sivaprasadreddy/reacho
 The workflow verifies the Hugo release checksum, validates PRs without deployment privileges, and deploys merges to GitHub Pages using its generated base URL. Repository subpaths and custom domains are supported. PR code does not receive Pages write permissions. For a different default branch, update workflow branch conditions, `HUGO_PARAMS_BRANCH`, and `params.branch`.
 
 Set `baseURL` in `hugo.yaml` if building outside Actions. No secrets are required for Pages deployment; GitHub supplies the scoped workflow token.
+
+## Custom domain: reachout2me.online
+
+Hugo’s production `baseURL` is `https://reachout2me.online/`. Local preview overrides it to localhost. The production check task and PR workflow validate URLs at the domain root.
+
+### BigRock DNS
+
+Open [BigRock’s dashboard](https://myorders.bigrock.in/dashboard), select **Orders → reachout2me.online → DNS Records**. Ensure the domain registration is active and its DNS service is enabled. If using BigRock’s Free DNS service, its default nameservers must be active: `dns1.bigrock.in`, `dns2.bigrock.in`, `dns3.bigrock.in`, and `dns4.bigrock.in`. Use the nameservers assigned by your DNS service if using Premium DNS instead.
+
+Add these records (the apex host is `@`, or blank if BigRock’s form uses a blank host for the domain itself):
+
+| Type | Host | Value |
+| --- | --- | --- |
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+| CNAME | www | sivaprasadreddy.github.io |
+
+Use the default TTL. Replace conflicting parking records for these hosts; retain unrelated mail and verification records. The `www` CNAME points to the GitHub user domain without `/reachout/`.
+
+### GitHub Pages cutover
+
+After DNS resolves to GitHub Pages:
+
+1. Open [repository Pages settings](https://github.com/sivaprasadreddy/reachout/settings/pages).
+2. Save `reachout2me.online` under **Custom domain**.
+3. Run **Validate and deploy ReachOut** on `main` to rebuild using the custom-domain URL returned by `actions/configure-pages`.
+4. Once GitHub provisions the certificate, enable **Enforce HTTPS**.
+5. Verify the home page, profile pages, search, social links, and the `www` redirect at the new domain.
+
+This site deploys through a custom Actions workflow. GitHub ignores `CNAME` files for this publishing mode, so the repository’s Pages setting must be updated; adding a file alone does not activate the domain.
+
+References: [BigRock DNS activation](https://www.bigrock.in/help/article/Go-to-the-DNS-panel), [BigRock record management](https://www.bigrock.in/help/article/How-to-add-DNS-records-under-the-BigRock-DNS-panel), [GitHub Pages custom domains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
 ## Search and accessibility
 
