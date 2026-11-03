@@ -1,6 +1,6 @@
 baseURL: https://reachout2me.online/
 locale: en-US
-title: ReachOut
+title: ReachOut2Me
 enableRobotsTXT: true
 disableKinds: [taxonomy, term, RSS]
 params:

@@ -1,4 +1,4 @@
-name: Validate and deploy ReachOut
+name: Validate and deploy ReachOut2Me
 on:
   push:
     branches: [main]
