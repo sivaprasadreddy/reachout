@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">K. Siva Prasad Reddy</title>
+  <desc id="desc">Illustrated portrait based on the SivaLabs photo: swept black hair, rectangular glasses, a moustache, and a black crew-neck shirt.</desc>
+  <defs>
+    <clipPath id="portrait"><circle cx="256" cy="256" r="256"/></clipPath>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#c8906e"/>
+      <stop offset="1" stop-color="#ad7456"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#portrait)">
+    <path fill="#e9e7df" d="M0 0h512v512H0z"/>
+    <path fill="#dcded2" d="M0 413c90-48 153-40 256-39s174-8 256 39v99H0z"/>
+    <!-- Shoulder silhouette and crew neck. -->
+    <path fill="#191d23" d="M41 512l13-66c5-30 24-48 56-59l88-29h117l88 29c32 11 51 29 56 59l13 66z"/>
+    <path fill="#12171d" d="M79 435c27 11 30 48 32 77H41l13-66c3-16 8-27 17-37zM433 435c-27 11-30 48-32 77h71l-13-66c-3-16-8-27-17-37z"/>
+    <path fill="#b57b59" d="M205 315h103l4 55c0 25-24 44-56 44s-55-19-55-44z"/>
+    <path fill="#9c644a" d="M205 322c18 20 53 31 103 7v25c-32 22-69 17-104-1z"/>
+    <path fill="#252a31" d="M193 361c7 30 26 48 63 48 35 0 57-18 64-48l12 5c-6 39-35 60-76 60-43 0-68-22-75-60z"/>
+    <!-- Ears sit behind the head. -->
+    <path fill="#b57c5e" d="M154 207c-15-16-27-3-23 23l8 40c2 11 9 15 18 11l9-29zM357 207c15-16 27-3 23 23l-8 40c-2 11-9 15-18 11l-9-29z"/>
+    <path fill="none" stroke="#955e48" stroke-linecap="round" stroke-width="4" d="M142 220l6 34m221-34-6 34"/>
+    <!-- Face and short sideburns. -->
+    <path fill="url(#skin)" d="M152 159c1-60 207-66 208 0v93c-1 35-12 64-34 83-20 18-40 27-70 27s-51-9-71-27c-22-19-33-48-33-83z"/>
+    <path fill="#a96e53" opacity=".55" d="M161 237c-2 44 14 74 42 95 19 14 37 19 53 19 36 0 61-16 84-41-17 33-46 52-84 52-30 0-51-9-71-27-22-19-33-48-33-83v-44z"/>
+    <path fill="#202328" d="M146 220l-8-58c-5-49 14-80 51-99 31-16 69-22 103-13 22 5 38 14 47 28 20-2 34 12 39 34 6 27-1 66-15 108l-7-42c-3-19-9-40-21-56-29 12-51 8-77 6-34-4-70 7-92 30l-11 60z"/>
+    <path fill="#171b20" d="M145 145c15-37 47-61 91-67 37-6 68 0 95 21-40-12-79-9-113 5-28 11-50 26-73 41z"/>
+    <g fill="none" stroke="#33373a" stroke-linecap="round" stroke-width="3" opacity=".7">
+      <path d="M162 115c30-36 82-49 130-32M176 99c34-32 77-37 112-27M184 126c35-29 85-35 121-22M205 66c39-13 74-8 99 10M345 102c15 22 18 46 15 73"/>
+    </g>
+    <!-- Eyebrows and eyes. -->
+    <path fill="#292929" d="M169 212c18-13 43-12 62 1l-1 7c-24-11-40-9-61-1zM280 213c19-13 44-14 63 0v7c-23-9-39-11-62 0z"/>
+    <path fill="#f1e4d7" d="M176 237q24-19 48 1-24 15-48-1M287 238q24-19 48-1-24 16-48 1"/>
+    <g fill="#34302e"><ellipse cx="201" cy="237" rx="8" ry="10"/><ellipse cx="310" cy="237" rx="8" ry="10"/></g>
+    <g fill="#161b1f"><ellipse cx="201" cy="238" rx="4" ry="6"/><ellipse cx="310" cy="238" rx="4" ry="6"/></g>
+    <g fill="#fff"><circle cx="204" cy="234" r="2.4"/><circle cx="313" cy="234" r="2.4"/></g>
+    <path fill="none" stroke="#70503e" stroke-width="3" stroke-linecap="round" d="M177 237q23-19 47 1m63 0q24-19 48-1"/>
+    <!-- Thin, dark rectangular frames and translucent lenses. -->
+    <g stroke="#414b56" stroke-width="5" stroke-linejoin="round">
+      <path fill="#b6c6d1" fill-opacity=".12" d="M158 221q36-8 82 2l-5 38q-1 13-15 14l-38-1q-13-1-16-13zM272 223q46-10 82-2l-8 40q-3 12-16 13l-38 1q-14-1-15-14z"/>
+      <path fill="none" d="M240 229q16-10 32 0m-114-7-17-6m213 6 16-6"/>
+    </g>
+    <path fill="none" stroke="#fff" stroke-opacity=".34" stroke-width="3" stroke-linecap="round" d="m172 226 9 18m8-20 5 10m91-7 7 15"/>
+    <!-- Nose, moustache, and smile. -->
+    <path fill="none" stroke="#9c654c" stroke-width="4" stroke-linecap="round" d="m253 245-9 35q11 8 25 0"/>
+    <path fill="#272729" d="M255 290c-12-10-25-3-37 5-9 6-16 10-17 20 21 3 39-3 55-13 14 11 34 16 54 13-2-9-9-15-18-20-13-8-25-15-37-5z"/>
+    <path fill="none" stroke="#494039" stroke-width="2" stroke-linecap="round" d="m227 300-14 10m27-16-13 14m43-13 13 13m0-7 14 10"/>
+    <path fill="#9e6257" d="M224 318q31 10 63 0-11 20-32 20-19 0-31-20z"/>
+    <path fill="none" stroke="#764d44" stroke-linecap="round" stroke-width="2" d="M224 318q30 4 63 0"/>
+    <path fill="none" stroke="#d49b7b" stroke-linecap="round" stroke-width="3" d="M243 330q13 4 25 0"/>
+    <circle cx="342" cy="286" r="2.3" fill="#71503d"/>
+    <!-- Subtle fabric detail, kept simple for small avatar sizes. -->
+    <path fill="none" stroke="#2b3036" stroke-width="3" stroke-linecap="round" d="m132 423-7 70m255-70 7 70"/>
+  </g>
+</svg>

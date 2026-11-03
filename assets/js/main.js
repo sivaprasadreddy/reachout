@@ -39,9 +39,23 @@
     update();
   }
   async function copy(text, status) {
-    try { await navigator.clipboard.writeText(text); status.textContent = 'Copied to clipboard.'; }
-    catch { status.textContent = 'Clipboard unavailable. Select and copy the text manually.'; }
+    try { await navigator.clipboard.writeText(text); status.textContent = 'Copied to clipboard.'; return true; }
+    catch { status.textContent = 'Clipboard unavailable. Select and copy the text manually.'; return false; }
   }
+  document.querySelectorAll('[data-copy-profile]').forEach(button => {
+    button.addEventListener('click', async () => {
+      const container = button.closest('.card-share');
+      const status = container.querySelector('.copy-profile-status');
+      const fallback = container.querySelector('.copy-profile-url');
+      const url = new URL(button.dataset.copyProfile, location.origin).href;
+      status.textContent = '';
+      button.disabled = true;
+      const copied = await copy(url, status);
+      button.disabled = false;
+      fallback.hidden = copied;
+      if (!copied) { fallback.value = url; fallback.focus(); fallback.select(); }
+    });
+  });
   document.querySelector('#share-profile')?.addEventListener('click', () => copy(location.href.split('?')[0], document.querySelector('#share-status')));
   const form = document.querySelector('#profile-form');
   if (!form) return;
