@@ -1,14 +1,13 @@
 # Source: https://www.sivalabs.in/about/
 name: "K. Siva Prasad Reddy"
 role: "Software engineer, architect & technical educator"
-bio: "I build backend systems with Java, Spring Boot, and Go, and share practical lessons through SivaLabs tutorials, videos, books, and training. Exploring software architecture, developer productivity, and AI-assisted development."
+bio: "I am a software engineer, architect, trainer, and technical content creator. I share practical lessons through SivaLabs tutorials, videos, books, and training."
 category: "Development"
-# The about page does not specify a physical location.
-location: "Online"
-tags: ["Java", "Spring Boot", "Software architecture", "Teaching", "AI-assisted development"]
-avatar: "images/sivaprasadreddy.webp"
+location: "Hyderabad, India"
+tags: ["Software Engineer", "Software Architecture"]
+avatar: "images/sivaprasadreddy.png"
 links:
-  - label: "SivaLabs — Blog & tutorials"
+  - label: "SivaLabs — Blog"
     url: "https://www.sivalabs.in/"
     icon: "website"
   - label: "GitHub"

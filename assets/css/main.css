@@ -1635,3 +1635,45 @@ legend {
     font-size:12px
   }
 }
+
+.card-share {
+  border-top: 1px solid #eef0e9;
+  padding: 5px 0 10px;
+}
+.copy-profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+}
+.copy-profile-link:hover {
+  color: #526d35;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.copy-profile-link svg {
+  width: 17px;
+  height: 17px;
+}
+.copy-profile-status {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+}
+.copy-profile-url {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 8px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper);
+  font-size: 14px;
+}
