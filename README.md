@@ -1,4 +1,4 @@
-# ReachOut
+# ReachOut2Me
 
 A mobile-friendly, accessible community profile directory built with **Hugo**. Profiles live in individual YAML files; no database, application server, or build-time npm dependencies are needed.
 
@@ -66,7 +66,7 @@ Repository: [sivaprasadreddy/reachout](https://github.com/sivaprasadreddy/reacho
 
 1. In **Settings → Pages → Build and deployment**, choose **GitHub Actions** as the source.
 2. Enable a branch ruleset as described above.
-3. Push or merge to `main`, or run **Validate and deploy ReachOut** manually.
+3. Push or merge to `main`, or run **Validate and deploy ReachOut2Me** manually.
 
 The workflow verifies the Hugo release checksum, validates PRs without deployment privileges, and deploys merges to GitHub Pages using its generated base URL. Repository subpaths and custom domains are supported. PR code does not receive Pages write permissions. For a different default branch, update workflow branch conditions, `HUGO_PARAMS_BRANCH`, and `params.branch`.
 
@@ -98,7 +98,7 @@ After DNS resolves to GitHub Pages:
 
 1. Open [repository Pages settings](https://github.com/sivaprasadreddy/reachout/settings/pages).
 2. Save `reachout2me.online` under **Custom domain**.
-3. Run **Validate and deploy ReachOut** on `main` to rebuild using the custom-domain URL returned by `actions/configure-pages`.
+3. Run **Validate and deploy ReachOut2Me** on `main` to rebuild using the custom-domain URL returned by `actions/configure-pages`.
 4. Once GitHub provisions the certificate, enable **Enforce HTTPS**.
 5. Verify the home page, profile pages, search, social links, and the `www` redirect at the new domain.
 
