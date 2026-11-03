@@ -1,0 +1,18 @@
+example: true
+name: "Daniel Kim"
+role: "Developer & open-source enthusiast"
+bio: "Building things for the web and sharing what I learn along the way. Big believer in open source."
+category: "Development"
+location: "Seoul, South Korea"
+tags: ["Open source", "Web development", "Hugo"]
+avatar: "images/daniel-kim.svg"
+links:
+  - label: "Github"
+    url: "https://github.com"
+    icon: "github"
+  - label: "X"
+    url: "https://x.com"
+    icon: "x"
+  - label: "Personal website"
+    url: "https://example.com"
+    icon: "website"

@@ -1,0 +1,2 @@
+{{ $p := . }}
+{{ with $p.avatar }}<img class="avatar" src="{{ . | relURL }}" width="72" height="72" alt="" loading="lazy">{{ else }}<span class="avatar initials" data-tone="{{ $p.category }}" aria-hidden="true">{{ substr $p.name 0 1 }}</span>{{ end }}

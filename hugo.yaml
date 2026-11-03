@@ -1,0 +1,11 @@
+baseURL: https://sivaprasadreddy.github.io/reachout/
+locale: en-US
+title: ReachOut
+enableRobotsTXT: true
+disableKinds: [taxonomy, term, RSS]
+params:
+  description: Find your people. Discover creators, builders, and curious minds — and all the places they call home.
+  repository: https://github.com/sivaprasadreddy/reachout
+  branch: main
+outputs:
+  home: [HTML]

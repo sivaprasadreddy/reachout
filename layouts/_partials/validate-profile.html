@@ -1,0 +1,12 @@
+{{ $p := .profile }}
+{{ if not (findRE `^[a-z0-9]+(-[a-z0-9]+)*$` .slug) }}{{ errorf "Invalid profile filename: %s" .slug }}{{ end }}
+{{ range $key := slice "name" "role" "bio" "category" "location" }}
+  {{ if not (index $p $key) }}{{ errorf "%s: missing %s" $.slug $key }}{{ end }}
+{{ end }}
+{{ if not (in (slice "Design" "Development" "Writing" "Photography" "Music" "Other") $p.category) }}{{ errorf "%s: invalid category" .slug }}{{ end }}
+{{ if not $p.links }}{{ errorf "%s: at least one link is required" .slug }}{{ end }}
+{{ range $p.links }}
+  {{ if not .label }}{{ errorf "%s: every link needs a label" $.slug }}{{ end }}
+  {{ if not (findRE `^https?://[^\s]+$` .url) }}{{ errorf "%s: link must be an http(s) URL: %s" $.slug .url }}{{ end }}
+{{ end }}
+{{ with $p.avatar }}{{ if not (fileExists (printf "static/%s" .)) }}{{ errorf "%s: avatar does not exist" $.slug }}{{ end }}{{ end }}

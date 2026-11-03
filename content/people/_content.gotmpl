@@ -1,0 +1,4 @@
+{{ range $slug, $profile := hugo.Data.profiles }}
+  {{ partial "validate-profile.html" (dict "slug" $slug "profile" $profile) }}
+  {{ $.AddPage (dict "kind" "page" "path" $slug "title" $profile.name "params" (dict "profile" $profile "slug" $slug)) }}
+{{ end }}

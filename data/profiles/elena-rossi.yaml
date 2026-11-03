@@ -1,0 +1,18 @@
+example: true
+name: "Elena Rossi"
+role: "Photographer & slow traveler"
+bio: "Collecting quiet moments, unfamiliar streets, and stories told through natural light."
+category: "Photography"
+location: "Florence, Italy"
+tags: ["Travel", "Film photography", "Nature"]
+avatar: "images/elena-rossi.svg"
+links:
+  - label: "Instagram"
+    url: "https://www.instagram.com"
+    icon: "instagram"
+  - label: "Behance"
+    url: "https://www.behance.net"
+    icon: "behance"
+  - label: "Personal website"
+    url: "https://example.com"
+    icon: "website"

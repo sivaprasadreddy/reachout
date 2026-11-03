@@ -1,0 +1,18 @@
+example: true
+name: "Sofia Alvarez"
+role: "Travel writer & everyday adventurer"
+bio: "Finding extraordinary stories in ordinary places. Currently taking the scenic route."
+category: "Writing"
+location: "Barcelona, Spain"
+tags: ["Travel writing", "Books", "Adventure"]
+avatar: "images/sofia-alvarez.svg"
+links:
+  - label: "Substack"
+    url: "https://substack.com"
+    icon: "substack"
+  - label: "Instagram"
+    url: "https://www.instagram.com"
+    icon: "instagram"
+  - label: "Personal website"
+    url: "https://example.com"
+    icon: "website"
