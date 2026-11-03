@@ -19,5 +19,5 @@ description = "Build, check JavaScript syntax, and validate generated pages and 
 depends = ["build"]
 run = [
   "node --check assets/js/main.js",
-  "python3 scripts/check_site.py --base-path /reachout/",
+  "python3 scripts/check_site.py --base-path /",
 ]
